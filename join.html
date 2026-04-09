@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Multiplex Cell Engineering Lab</title>
+  <title>Join — Multiplex Cell Engineering Lab</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -16,18 +16,13 @@
       margin: 0 auto;
     }
 
-    /* ── HEADER ── */
     .site-name {
       font-size: 0.85rem;
       font-family: Arial, sans-serif;
       margin-bottom: 6px;
     }
 
-    .site-name a {
-      color: #111;
-      text-decoration: none;
-    }
-
+    .site-name a { color: #111; text-decoration: none; }
     .site-name a:hover { text-decoration: underline; }
 
     nav {
@@ -46,27 +41,28 @@
     nav a:hover { text-decoration: underline; }
     nav a.active { border-bottom: 1px solid #111; }
 
-    /* ── PAGE TITLE ── */
     h1 {
       font-size: 2rem;
       font-weight: normal;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
 
-    /* ── GRID ── */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px 60px;
+    p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 1.4em;
+      max-width: 600px;
     }
 
-    @media (max-width: 560px) {
-      .grid { grid-template-columns: 1fr; }
-      body { padding: 40px 24px; }
+    a { color: #111; }
+    a:hover { text-decoration: underline; }
+
+    .positions {
+      margin-top: 40px;
     }
 
-    /* ── BLOCKS ── */
-    .block h2 {
+    .positions h2 {
       font-family: Arial, sans-serif;
       font-size: 0.72rem;
       font-weight: normal;
@@ -76,32 +72,22 @@
       margin-bottom: 14px;
     }
 
-    .block p, .block address {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      font-style: normal;
-      color: #333;
-    }
-
-    .block a {
-      color: #111;
-    }
-
-    .block a:hover { text-decoration: underline; }
-
-    .block ul {
+    .positions ul {
       list-style: none;
       font-size: 0.95rem;
       line-height: 1.8;
       color: #333;
     }
 
-    /* ── FOOTER ── */
     footer {
       margin-top: 80px;
       font-family: Arial, sans-serif;
       font-size: 0.75rem;
       color: #bbb;
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 40px 24px; }
     }
   </style>
 </head>
@@ -113,36 +99,30 @@
     <a href="research.html">research</a>
     <a href="papers.html">papers</a>
     <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
-    <a href="join.html">join</a>
-    <a href="contact.html" class="active">contact</a>
+    <a href="join.html" class="active">join</a>
+    <a href="contact.html">contact</a>
   </nav>
 
-  <h1>Contact</h1>
+  <h1>Join</h1>
 
-  <div class="grid">
+  <p>
+    We are always looking for motivated and curious people to join the lab.
+    We welcome applicants at all levels with backgrounds in molecular biology,
+    bioengineering, genomics, bioinformatics, or related fields.
+  </p>
 
-    <div class="block">
-      <h2>Principal Investigator</h2>
-      <address>
-        <strong>Raphael Ferreira, PhD</strong><br>
-        Assistant Professor<br>
-        DTU Health Tech<br>
-        Technical University of Denmark<br><br>
-        <a href="mailto:rferreira@dtu.dk">rferreira@dtu.dk</a>
-      </address>
-    </div>
+  <p>
+    To apply, send a CV and a short description of your research interests to
+    <a href="mailto:rferreira@dtu.dk">rferreira@dtu.dk</a>.
+  </p>
 
-    <div class="block">
-      <h2>Location</h2>
-      <address>
-        DTU Health Tech<br>
-        Anker Engelunds Vej 1<br>
-        Building XXX, Room XXX<br>
-        2800 Kgs. Lyngby<br>
-        Denmark
-      </address>
-    </div>
-
+  <div class="positions">
+    <h2>Open Positions</h2>
+    <ul>
+      <li>Postdoctoral researcher</li>
+      <li>PhD student</li>
+      <li>MSc / exchange student</li>
+    </ul>
   </div>
 
   <footer>
