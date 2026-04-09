@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Multiplex Cell Engineering Lab</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      color: #111;
+      background: #fff;
+      padding: 60px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    .site-name {
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+
+    .site-name a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .site-name a:hover { text-decoration: underline; }
+
+    nav {
+      margin-bottom: 60px;
+    }
+
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #111;
+      text-decoration: none;
+      margin-right: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    nav a:hover { text-decoration: underline; }
+    nav a.active { border-bottom: 1px solid #111; }
+
+    /* ── PAGE TITLE ── */
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 48px;
+    }
+
+    /* ── GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 60px;
+    }
+
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+      body { padding: 40px 24px; }
+    }
+
+    /* ── BLOCKS ── */
+    .block h2 {
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    .block p, .block address {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      font-style: normal;
+      color: #333;
+    }
+
+    .block a {
+      color: #111;
+    }
+
+    .block a:hover { text-decoration: underline; }
+
+    .block ul {
+      list-style: none;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
+  <nav>
+    <a href="people.html">people</a>
+    <a href="research.html">research</a>
+    <a href="papers.html">papers</a>
+    <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
+    <a href="contact.html" class="active">contact</a>
+  </nav>
+
+  <h1>Contact</h1>
+
+  <div class="grid">
+
+    <div class="block">
+      <h2>Principal Investigator</h2>
+      <address>
+        <strong>Raphael Ferreira, PhD</strong><br>
+        Assistant Professor<br>
+        DTU Health Tech<br>
+        Technical University of Denmark<br><br>
+        <a href="mailto:rferreira@dtu.dk">rferreira@dtu.dk</a>
+      </address>
+    </div>
+
+    <div class="block">
+      <h2>Location</h2>
+      <address>
+        DTU Health Tech<br>
+        Anker Engelunds Vej 1<br>
+        Building XXX, Room XXX<br>
+        2800 Kgs. Lyngby<br>
+        Denmark
+      </address>
+    </div>
+
+    <div class="block">
+      <h2>Join the Lab</h2>
+      <p>
+        We are always looking for motivated people to join us.
+        Prospective postdocs, PhD students, and master's students
+        are welcome to reach out with a CV and a short description
+        of your research interests.<br><br>
+        <a href="mailto:rferreira@dtu.dk">rferreira@dtu.dk</a>
+      </p>
+    </div>
+
+    <div class="block">
+      <h2>Open Positions</h2>
+      <ul>
+        <li>Postdoctoral researcher</li>
+        <li>PhD student</li>
+        <li>MSc / exchange student</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
