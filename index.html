@@ -7,38 +7,45 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: Georgia, serif;
       color: #111;
       background: #fff;
-      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      min-height: 100vh;
       padding: 40px 24px;
     }
 
+    .center {
+      text-align: center;
+    }
+
     h1 {
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: normal;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.2;
     }
 
     .affil {
-      font-size: clamp(0.85rem, 2vw, 1.05rem);
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
       color: #666;
       font-style: italic;
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     nav a {
       font-family: Arial, sans-serif;
-      font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+      font-size: clamp(0.85rem, 1.8vw, 1rem);
       color: #111;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 14px;
       letter-spacing: 0.03em;
     }
 
@@ -46,17 +53,16 @@
   </style>
 </head>
 <body>
-
-  <h1>Multiplex Cell Engineering Lab</h1>
-  <p class="affil">DTU Health Tech &mdash; Technical University of Denmark</p>
-
-  <nav>
-    <a href="#people">people</a>
-    <a href="#research">research</a>
-    <a href="#papers">papers</a>
-    <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
-    <a href="#contact">contact</a>
-  </nav>
-
+  <div class="center">
+    <h1>Multiplex Cell Engineering Lab</h1>
+    <p class="affil">DTU Health Tech &mdash; Technical University of Denmark</p>
+    <nav>
+      <a href="#people">people</a>
+      <a href="#research">research</a>
+      <a href="#papers">papers</a>
+      <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
 </body>
 </html>
