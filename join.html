@@ -58,6 +58,22 @@
     a { color: #111; }
     a:hover { text-decoration: underline; }
 
+    .btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 12px 28px;
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+
+    .btn:hover { background: #444; text-decoration: none; }
+
     footer {
       margin-top: 80px;
       font-family: Arial, sans-serif;
@@ -91,8 +107,8 @@
     We are looking for enthusiastic and rigorous scientists across all positions
     who are excited about pushing the boundaries of what is possible in the human genome.
     Please reach out if you're interested in joining the team!
-    Send an <a href="mailto:rapfer@dtu.dk">email to Raphael</a> with your CV!
   </p>
+  <a href="mailto:rapfer@dtu.dk" class="btn">Send CV to Raphael</a>
 
   <footer>
     &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
