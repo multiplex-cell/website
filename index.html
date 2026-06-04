@@ -11,19 +11,14 @@
     body {
       font-family: Georgia, serif;
       color: #111;
-      background: transparent;
+      background-color: #f5f4f0;
+      background-image: radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       padding: 40px 24px;
-    }
-
-    #bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
     }
 
     .center { text-align: center; }
@@ -55,7 +50,6 @@
   </style>
 </head>
 <body>
-  <canvas id="bg"></canvas>
   <div class="center">
     <h1>Multiplex Cell Engineering Lab</h1>
     <p class="affil">DTU Health Tech &mdash; xTI section</p>
@@ -68,79 +62,5 @@
       <a href="contact.html">contact</a>
     </nav>
   </div>
-
-  <script>
-  (function () {
-    const c = document.getElementById('bg');
-    const ctx = c.getContext('2d');
-
-    function render() {
-      c.width  = innerWidth;
-      c.height = innerHeight;
-
-      ctx.fillStyle = '#f0ede6';
-      ctx.fillRect(0, 0, c.width, c.height);
-
-      function hash(a, b) {
-        const s = Math.sin(a * 127.1 + b * 311.7) * 43758.5453;
-        return s - Math.floor(s);
-      }
-      function smooth(t) { return t * t * (3 - 2 * t); }
-      function noise(x, y) {
-        const xi = Math.floor(x), yi = Math.floor(y);
-        const u = smooth(x - xi), v = smooth(y - yi);
-        return hash(xi,   yi)  * (1-u) * (1-v)
-             + hash(xi+1, yi)  *    u  * (1-v)
-             + hash(xi,   yi+1)* (1-u) *    v
-             + hash(xi+1, yi+1)*    u  *    v;
-      }
-      function fbm(x, y) {
-        return noise(x,     y    ) * 0.500
-             + noise(x*2.1, y*2.1) * 0.250
-             + noise(x*4.3, y*4.3) * 0.125
-             + noise(x*8.7, y*8.7) * 0.063;
-      }
-
-      const pal = [
-        [172,  88,  66, 0.20],  // terracotta
-        [ 78, 112,  88, 0.18],  // sage
-        [ 72,  92, 148, 0.17],  // slate blue
-        [158, 128,  94, 0.16],  // warm tan
-        [132,  72,  92, 0.17],  // dusty rose
-        [ 48,  52,  72, 0.15],  // dark slate
-      ];
-
-      const sc = 0.0022;
-      const N  = innerWidth < 600 ? 700 : 1800;
-
-      for (let i = 0; i < N; i++) {
-        let px = Math.random() * c.width;
-        let py = Math.random() * c.height;
-        const steps = 100 + Math.floor(Math.random() * 240);
-        const speed = 0.5 + Math.random() * 1.8;
-        const col   = pal[i % pal.length];
-
-        ctx.beginPath();
-        ctx.moveTo(px, py);
-
-        for (let s = 0; s < steps; s++) {
-          const angle = fbm(px * sc, py * sc) * Math.PI * 4;
-          px += Math.cos(angle) * speed;
-          py += Math.sin(angle) * speed;
-          if (px < -20 || px > c.width + 20 || py < -20 || py > c.height + 20) break;
-          ctx.lineTo(px, py);
-        }
-
-        ctx.strokeStyle = `rgba(${col[0]},${col[1]},${col[2]},${col[3]})`;
-        ctx.lineWidth   = 0.3 + Math.random() * 0.8;
-        ctx.stroke();
-      }
-    }
-
-    render();
-    let t;
-    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(render, 300); });
-  })();
-  </script>
 </body>
 </html>
