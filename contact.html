@@ -90,11 +90,17 @@
       font-size: 0.75rem;
       color: #888;
     }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
   <div id="helix-stage"><canvas id="helix-canvas" width="1672" height="941"></canvas></div>
 
+  <div class="page-content">
   <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
   <nav>
     <a href="people.html">people</a>
@@ -137,6 +143,8 @@
   <footer>
     &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
   </footer>
+
+  </div><!-- .page-content -->
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="files/helix.js"></script>
