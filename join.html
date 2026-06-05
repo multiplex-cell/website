@@ -7,12 +7,18 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    #helix-stage {
+      position: fixed; inset: 0; z-index: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #f4eee2;
+    }
+    #helix-canvas { flex: none; transform-origin: center center; }
+
     body {
       font-family: Georgia, serif;
       color: #111;
-      background:
-        linear-gradient(rgba(255,255,255,0.50), rgba(255,255,255,0.50)),
-        url('files/background-1.png') center center / cover no-repeat fixed;
+      position: relative;
+      z-index: 1;
       padding: 60px 40px;
       max-width: 760px;
       margin: 0 auto;
@@ -87,6 +93,8 @@
   </style>
 </head>
 <body>
+  <div id="helix-stage"><canvas id="helix-canvas" width="1672" height="941"></canvas></div>
+
   <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
   <nav>
     <a href="people.html">people</a>
@@ -116,5 +124,6 @@
   </footer>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="files/helix.js"></script>
 </body>
 </html>
