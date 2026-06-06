@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People — Multiplex Cell Engineering Lab</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    #helix-stage {
+      position: fixed; inset: 0; z-index: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #f4eee2;
+    }
+    #helix-canvas { flex: none; transform-origin: center center; }
+
+    body {
+      font-family: Georgia, serif;
+      color: #111;
+      padding: 60px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── NAV ── */
+    .site-name {
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+    .site-name a { color: #111; text-decoration: none; }
+    .site-name a:hover { text-decoration: underline; }
+
+    nav { margin-bottom: 60px; }
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #111;
+      text-decoration: none;
+      margin-right: 20px;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { text-decoration: underline; }
+    nav a.active { border-bottom: 1px solid #111; }
+
+    /* ── PAGE TITLE ── */
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 56px;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 32px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0ddd8;
+    }
+
+    /* ── PERSON CARD ── */
+    .roster {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-bottom: 72px;
+    }
+
+    .person {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .photo-wrap {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #d8d2c8;
+      flex-shrink: 0;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Initials fallback shown when no image */
+    .photo-wrap .initials {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-size: 1.6rem;
+      color: #888;
+      letter-spacing: -0.02em;
+    }
+
+    .person-info h2 {
+      font-size: 1.05rem;
+      font-weight: normal;
+      margin-bottom: 4px;
+    }
+
+    .person-info .role {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .person-info p {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: #444;
+    }
+
+    /* ── ALUMNI ── */
+    .alumni-section { margin-bottom: 40px; }
+
+    .alumni-list {
+      list-style: none;
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: #555;
+    }
+
+    .alumni-list li span.alumni-role {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-left: 8px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 40px 24px; }
+      .person {
+        grid-template-columns: 1fr;
+      }
+      .photo-wrap { width: 96px; height: 96px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="helix-stage"><canvas id="helix-canvas" width="1672" height="941"></canvas></div>
+
+  <div class="page-content">
+    <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
+    <nav>
+      <a href="people.html" class="active">people</a>
+      <a href="research.html">research</a>
+      <a href="papers.html">papers</a>
+      <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
+      <a href="join.html">join</a>
+      <a href="contact.html">contact</a>
+    </nav>
+
+    <h1>People</h1>
+
+    <!-- ── CURRENT MEMBERS ───────────────────────── -->
+    <p class="section-label">Current Members</p>
+
+    <div class="roster">
+
+      <!-- PI -->
+      <div class="person">
+        <div class="photo-wrap">
+          <!-- Replace src with files/pictures/raphael.jpg when ready -->
+          <div class="initials">RF</div>
+        </div>
+        <div class="person-info">
+          <h2>Raphael Ferreira</h2>
+          <div class="role">Principal Investigator</div>
+          <p>
+            Raphael leads the lab. His research focuses on large-scale genome
+            engineering, prime editing in hematopoietic stem cells, and
+            next-generation cell therapies. He is an Assistant Professor at
+            DTU Health Tech in the xTI section.
+          </p>
+        </div>
+      </div>
+
+      <!-- Victoria -->
+      <div class="person">
+        <div class="photo-wrap">
+          <!-- Replace src with files/pictures/victoria.jpg when ready -->
+          <div class="initials">VK</div>
+        </div>
+        <div class="person-info">
+          <h2>Victoria Kalla</h2>
+          <div class="role">PhD Student</div>
+          <p>
+            Victoria is a PhD student in the lab.
+          </p>
+        </div>
+      </div>
+
+      <!-- Anny -->
+      <div class="person">
+        <div class="photo-wrap">
+          <!-- Replace src with files/pictures/anny.jpg when ready -->
+          <div class="initials">AM</div>
+        </div>
+        <div class="person-info">
+          <h2>Anny Mais</h2>
+          <div class="role">PhD Student</div>
+          <p>
+            Anny is a PhD student in the lab.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /roster -->
+
+    <!-- ── ALUMNI ─────────────────────────────────── -->
+    <div class="alumni-section">
+      <p class="section-label">Alumni</p>
+      <ul class="alumni-list">
+        <!-- Add alumni here as:
+        <li>Full Name <span class="alumni-role">Role · Year</span></li>
+        -->
+        <li style="color:#bbb; font-style:italic; font-size:0.85rem;">— none yet —</li>
+      </ul>
+    </div>
+
+    <footer>
+      &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
+    </footer>
+  </div><!-- /.page-content -->
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="files/helix.js"></script>
+</body>
+</html>
