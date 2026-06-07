@@ -10,7 +10,7 @@
 
     var CW=1672, CH=941;
     var canvas=document.getElementById('helix-canvas'), ctx=canvas.getContext('2d');
-    function fit(){ var s=Math.min(innerWidth/CW, innerHeight/CH); canvas.style.transform='scale('+s+')'; }
+    function fit(){ var s=Math.max(innerWidth/CW, innerHeight/CH); canvas.style.transform='scale('+s+')'; }
     addEventListener('resize', fit); fit();
 
     function hash(a,b){ var h=((a*73856093)^(b*19349663))>>>0; return h/4294967296; }
