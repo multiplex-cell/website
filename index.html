@@ -49,6 +49,13 @@
     }
 
     nav a:hover { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; }
+      nav a { margin: 0; }
+      #helix-canvas { display: none; }
+      html, body { overflow: auto; }
+    }
   </style>
 </head>
 <body>
