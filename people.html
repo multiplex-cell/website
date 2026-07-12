@@ -78,14 +78,14 @@
 
     .person {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 144px 1fr;
       gap: 32px;
       align-items: start;
     }
 
     .photo-wrap {
-      width: 120px;
-      height: 120px;
+      width: 144px;
+      height: 144px;
       border-radius: 50%;
       overflow: hidden;
       background: #d8d2c8;
@@ -162,7 +162,7 @@
     @media (max-width: 560px) {
       body { padding: 40px 20px; }
       .person { grid-template-columns: 1fr; }
-      .photo-wrap { width: 96px; height: 96px; }
+      .photo-wrap { width: 115px; height: 115px; }
       .roster-panel { padding: 28px 24px; }
       nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 40px; }
       nav a { margin-right: 0; }
@@ -193,7 +193,7 @@
       <!-- PI -->
       <div class="person">
         <div class="photo-wrap">
-          <img src="files/roster/raphael.jpg" alt="Raphael Ferreira" style="object-position: center 30%;">
+          <img src="files/roster/raphael.jpg" alt="Raphael Ferreira" style="object-position: 62% 30%;">
         </div>
         <div class="person-info">
           <h2>Raphael Ferreira</h2>
@@ -206,7 +206,7 @@
       <!-- Victoria -->
       <div class="person">
         <div class="photo-wrap">
-          <img src="files/roster/vicky.jpg" alt="Victoria Kalla" style="object-position: 62% 18%;">
+          <img src="files/roster/vicky.jpg" alt="Victoria Kalla" style="object-position: 62% 18%; transform: scale(1.8); transform-origin: 60% 35%;">
         </div>
         <div class="person-info">
           <h2>Victoria Kalla</h2>
@@ -218,7 +218,7 @@
       <!-- Anny -->
       <div class="person">
         <div class="photo-wrap">
-          <img src="files/roster/anny.jpg" alt="Anny Mais" style="object-position: 57% 20%;">
+          <img src="files/roster/anny.jpg" alt="Anny Mais" style="object-position: 57% 20%; transform: scale(1.8); transform-origin: 57% 36%;">
         </div>
         <div class="person-info">
           <h2>Anny Mais</h2>
