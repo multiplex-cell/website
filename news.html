@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — Multiplex Cell Engineering Lab</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    #helix-stage {
+      position: fixed; inset: 0; z-index: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #f4eee2; overflow: hidden;
+    }
+    #helix-canvas { flex: none; transform-origin: center center; }
+
+    body {
+      font-family: Georgia, serif;
+      color: #111;
+      padding: 60px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── NAV ── */
+    .site-name {
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+    .site-name a { color: #111; text-decoration: none; }
+    .site-name a:hover { text-decoration: underline; }
+
+    nav { margin-bottom: 60px; }
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #111;
+      text-decoration: none;
+      margin-right: 20px;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { text-decoration: underline; }
+    nav a.active { border-bottom: 1px solid #111; }
+
+    /* ── CONTENT PANEL ── */
+    .content-panel {
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 6px;
+      padding: 40px 44px;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 40px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0ddd8;
+    }
+
+    /* ── NEWS LIST ── */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .news-date {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #aaa;
+      padding-top: 3px;
+    }
+
+    .news-item h2 {
+      font-size: 0.97rem;
+      font-weight: normal;
+      margin-bottom: 6px;
+    }
+
+    .news-item p {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 40px 20px; }
+      .news-item { grid-template-columns: 1fr; gap: 6px; }
+      .content-panel { padding: 28px 24px; }
+      nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 40px; }
+      nav a { margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="helix-stage"><canvas id="helix-canvas" width="1672" height="941"></canvas></div>
+
+  <div class="page-content">
+    <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
+    <nav>
+      <a href="people.html">people</a>
+      <a href="news.html" class="active">news</a>
+      <a href="research.html">research</a>
+      <a href="papers.html">papers</a>
+      <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
+      <a href="join.html">join</a>
+      <a href="contact.html">contact</a>
+    </nav>
+
+    <div class="content-panel">
+      <p class="section-label">News</p>
+
+      <div class="news-list">
+
+        <div class="news-item">
+          <div class="news-date">Jul 2025</div>
+          <div>
+            <h2>Lab website launched</h2>
+            <p>The Multiplex Cell Engineering Lab is now online. We are a new lab at DTU Health Tech working at the interface of genome engineering and cell therapy.</p>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">— 2025</div>
+          <div>
+            <h2>[News headline]</h2>
+            <p>[Short description of the news item.]</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /content-panel -->
+
+    <footer>
+      &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
+    </footer>
+  </div><!-- /.page-content -->
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="files/helix.js"></script>
+</body>
+</html>
