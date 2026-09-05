@@ -205,65 +205,39 @@
     /* ── DIVIDER between sections ── */
     .section-gap { margin-top: 52px; }
 
-    /* ── HIGHLIGHT CARDS (perspectives, press) ── */
-    .highlight-card {
+    /* ── PERSPECTIVES inline note ── */
+    .paper-perspective {
       display: flex;
-      flex-direction: column;
-      border-radius: 5px;
-      overflow: hidden;
-      border: 1px solid #e0ddd8;
+      align-items: center;
+      gap: 10px;
+      margin-top: 9px;
+      padding: 7px 10px;
+      background: rgba(0,0,0,0.03);
+      border-radius: 4px;
     }
 
-    .highlight-card .hc-image {
-      width: 100%;
-      max-height: 160px;
-      overflow: hidden;
-      background: #e8e4dc;
-    }
-
-    .highlight-card .hc-image img {
-      width: 100%;
-      height: 160px;
+    .paper-perspective img {
+      width: 64px;
+      height: 42px;
       object-fit: cover;
-      object-position: center 30%;
-      display: block;
+      object-position: center 20%;
+      border-radius: 3px;
+      flex-shrink: 0;
     }
 
-    .highlight-card .hc-body {
-      padding: 18px 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .hc-tag {
+    .paper-perspective span {
       font-family: Arial, sans-serif;
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #aaa;
-    }
-
-    .hc-title {
-      font-size: 0.92rem;
-      font-weight: normal;
+      font-size: 0.74rem;
+      color: #999;
       line-height: 1.5;
     }
 
-    .hc-title a {
-      color: #111;
+    .paper-perspective a {
+      color: #777;
       text-decoration: underline;
       text-underline-offset: 2px;
-      text-decoration-color: #ccc;
     }
-    .hc-title a:hover { text-decoration-color: #111; }
-
-    .hc-venue {
-      font-family: Arial, sans-serif;
-      font-size: 0.77rem;
-      color: #aaa;
-    }
-    .hc-venue em { font-style: italic; color: #999; }
+    .paper-perspective a:hover { color: #111; }
 
     /* ── FOOTNOTE ── */
     .footnote {
@@ -322,23 +296,6 @@
 
 
       <!-- ════════════════════════════════════════════
-           RESEARCH HIGHLIGHTS
-      ═════════════════════════════════════════════ -->
-      <p class="section-label section-gap">Research Highlights</p>
-
-      <div class="highlight-card">
-        <div class="hc-image">
-          <img src="files/publications/nature-perspectives-mouse.png" alt="The complex role of nutrients in cancer spread — Nature News &amp; Views">
-        </div>
-        <div class="hc-body">
-          <p class="hc-tag">Nature &middot; News &amp; Views</p>
-          <p class="hc-title"><a href="https://www.nature.com/articles/d41586-025-03988-4" target="_blank" rel="noopener">The complex role of nutrients in cancer spread</a></p>
-          <p class="hc-venue"><em>Nature</em> (2026) &middot; Perspectives on Abbott, Subudhi, Ferreira et al.</p>
-        </div>
-      </div>
-
-
-      <!-- ════════════════════════════════════════════
            PRIOR WORK
       ═════════════════════════════════════════════ -->
       <p class="section-label section-gap">Prior Work</p>
@@ -354,6 +311,10 @@
               <h3><a href="https://www.nature.com/articles/s41586-025-09898-9" target="_blank" rel="noopener">Nutrient requirements of organ-specific metastasis in breast cancer</a></h3>
               <p class="authors">Abbott KL†, Subudhi S†, <strong>Ferreira R</strong>†, Gültekin Yş, Steinbuch SC, Munim MB, Ramesh DL, Honeder SE, Kumar AS, Wu M, et al.</p>
               <p class="venue"><em>Nature</em> 649, 1292–1301 (2026) &middot; <a href="https://doi.org/10.1038/s41586-025-09898-9" target="_blank" rel="noopener">doi:10.1038/s41586-025-09898-9</a></p>
+              <div class="paper-perspective">
+                <img src="files/publications/nature-perspectives-mouse.png" alt="Mouse organ metastasis illustration">
+                <span>News &amp; Views: <a href="https://www.nature.com/articles/d41586-025-03988-4" target="_blank" rel="noopener">The complex role of nutrients in cancer spread</a> &mdash; <em>Nature</em> (2026)</span>
+              </div>
             </div>
 
             <div class="paper">
