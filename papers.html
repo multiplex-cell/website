@@ -28,28 +28,17 @@
       margin: 0 auto;
     }
 
-    .page-content {
-      position: relative;
-      z-index: 1;
-    }
+    .page-content { position: relative; z-index: 1; }
 
     /* ── NAV ── */
-    .site-name {
-      font-size: 0.85rem;
-      font-family: Arial, sans-serif;
-      margin-bottom: 6px;
-    }
+    .site-name { font-size: 0.85rem; font-family: Arial, sans-serif; margin-bottom: 6px; }
     .site-name a { color: #111; text-decoration: none; }
     .site-name a:hover { text-decoration: underline; }
 
     nav { margin-bottom: 60px; }
     nav a {
-      font-family: Arial, sans-serif;
-      font-size: 0.85rem;
-      color: #111;
-      text-decoration: none;
-      margin-right: 20px;
-      letter-spacing: 0.03em;
+      font-family: Arial, sans-serif; font-size: 0.85rem; color: #111;
+      text-decoration: none; margin-right: 20px; letter-spacing: 0.03em;
     }
     nav a:hover { text-decoration: underline; }
     nav a.active { border-bottom: 1px solid #111; }
@@ -69,19 +58,13 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #999;
-      margin-bottom: 36px;
       padding-bottom: 8px;
       border-bottom: 1px solid #e0ddd8;
+      margin-bottom: 36px;
     }
-    .section-label + .section-label { margin-top: 56px; }
 
     /* ── PUB LIST ── */
-    .pub-list {
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-      margin-bottom: 0;
-    }
+    .pub-list { display: flex; flex-direction: column; gap: 32px; }
 
     .year-group {
       display: grid;
@@ -99,15 +82,11 @@
       padding-top: 4px;
     }
 
-    .papers-in-year {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
+    .papers-in-year { display: flex; flex-direction: column; gap: 26px; }
 
     /* ── SINGLE PAPER ── */
     .paper h3 {
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       font-weight: normal;
       line-height: 1.55;
       margin-bottom: 5px;
@@ -123,54 +102,54 @@
 
     .paper .authors {
       font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      color: #777;
+      font-size: 0.77rem;
+      color: #888;
       line-height: 1.5;
       margin-bottom: 3px;
     }
-    .paper .authors strong { color: #333; }
+    .paper .authors strong { color: #333; font-weight: 600; }
 
     .paper .venue {
       font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      color: #999;
+      font-size: 0.77rem;
+      color: #aaa;
     }
-    .paper .venue em { font-style: italic; }
+    .paper .venue em { font-style: italic; color: #999; }
+    .paper .venue a { color: #bbb; text-decoration: none; }
+    .paper .venue a:hover { color: #777; text-decoration: underline; }
 
-    /* journal badge for high-impact papers */
     .badge {
       display: inline-block;
-      margin-left: 8px;
+      margin-left: 7px;
       padding: 1px 6px;
       font-family: Arial, sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
+      font-size: 0.67rem;
+      letter-spacing: 0.03em;
       border-radius: 3px;
       background: #f0ede8;
-      color: #888;
+      color: #999;
       vertical-align: middle;
     }
+    .badge.preprint { background: #f0ede8; color: #bbb; }
+
+    /* ── DIVIDER between sections ── */
+    .section-gap { margin-top: 52px; }
 
     /* ── FOOTNOTE ── */
     .footnote {
       font-family: Arial, sans-serif;
-      font-size: 0.75rem;
-      color: #aaa;
-      margin-top: 40px;
+      font-size: 0.74rem;
+      color: #bbb;
+      margin-top: 44px;
+      line-height: 1.7;
     }
 
     /* ── FOOTER ── */
-    footer {
-      margin-top: 80px;
-      font-family: Arial, sans-serif;
-      font-size: 0.75rem;
-      color: #888;
-    }
+    footer { margin-top: 80px; font-family: Arial, sans-serif; font-size: 0.75rem; color: #888; }
 
     @media (max-width: 560px) {
       body { padding: 40px 20px; }
       .year-group { grid-template-columns: 1fr; gap: 4px; }
-      .year-tag { font-size: 0.68rem; }
       .content-panel { padding: 28px 24px; }
       nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 40px; }
       nav a { margin-right: 0; }
@@ -194,32 +173,60 @@
 
     <div class="content-panel">
 
-      <!-- ── LAB PUBLICATIONS ─────────────────────── -->
+      <!-- ════════════════════════════════════════════
+           LAB PUBLICATIONS
+      ═════════════════════════════════════════════ -->
       <p class="section-label">Lab Publications</p>
 
       <div class="pub-list">
 
+        <!-- 2026 -->
         <div class="year-group">
           <div class="year-tag">2026</div>
           <div class="papers-in-year">
 
             <div class="paper">
+              <h3>Nutrient requirements of organ-specific metastasis in breast cancer</h3>
+              <p class="authors">Abbott KL†, Subudhi S†, <strong>Ferreira R</strong>†, Gültekin Yş, Steinbuch SC, Munim MB, Ramesh DL, Honeder SE, Kumar AS, Wu M, et al.</p>
+              <p class="venue"><em>Nature</em> (2026)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Programmable nucleic acid sensing in human cells using circularizable ssDNA</h3>
+              <p class="authors">Mahas A†, <strong>Ferreira R</strong>†, Riedmayr LM, Church GM</p>
+              <p class="venue"><em>Nature Communications</em> 17 (2026)</p>
+            </div>
+
+            <div class="paper">
               <h3><a href="https://www.nature.com/articles/s41596-026-01409-y" target="_blank" rel="noopener">Large-scale genome structure interrogation via recombinase-mediated rearrangements of multiplexed prime edits in repetitive elements</a><span class="badge">Research of the Week</span></h3>
-              <p class="authors">Riedmayr LM, Koeppel J, <strong>Ferreira R</strong></p>
-              <p class="venue"><em>Nature Protocols</em> (2026) &middot; <a href="https://doi.org/10.1038/s41596-026-01409-y" target="_blank" rel="noopener" style="color:#aaa;">doi:10.1038/s41596-026-01409-y</a></p>
+              <p class="authors">Riedmayr LM, Koeppel J, Church GM, Parts L, <strong>Ferreira R</strong></p>
+              <p class="venue"><em>Nature Protocols</em> (2026) &middot; <a href="https://doi.org/10.1038/s41596-026-01409-y" target="_blank" rel="noopener">doi:10.1038/s41596-026-01409-y</a></p>
+            </div>
+
+            <div class="paper">
+              <h3>Short single-stranded DNA oligonucleotides enable intracellular transcription of functional RNAs in mammalian cells<span class="badge preprint">Preprint</span></h3>
+              <p class="authors">Mahas A, Perrotta RM, Oliynyk RT, <strong>Ferreira R</strong>, Church GM</p>
+              <p class="venue"><em>bioRxiv</em> 2026.05.30.729002 (2026)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2025 -->
         <div class="year-group">
           <div class="year-tag">2025</div>
           <div class="papers-in-year">
 
             <div class="paper">
-              <h3><a href="https://www.science.org/doi/abs/10.1126/science.ado3979" target="_blank" rel="noopener">Randomizing the human genome by engineering recombination between repeat elements</a></h3>
+              <h3>Engineered base editors with reduced bystander editing through directed evolution</h3>
+              <p class="authors">Perrotta RM†, Vinke S†, <strong>Ferreira R</strong>†, Moret M, Mahas A, Chiappino-Pepe A, Riedmayr LM, Mehra AT, Lehmann LS, Church GM</p>
+              <p class="venue"><em>Nature Biotechnology</em> (2025)</p>
+            </div>
+
+            <div class="paper">
+              <h3><a href="https://doi.org/10.1126/science.ado3979" target="_blank" rel="noopener">Randomizing the human genome by engineering recombination between repeat elements</a></h3>
               <p class="authors">Koeppel J†, <strong>Ferreira R</strong>†, Vanderstichele T, Riedmayr LM, Peets EM, Girling G, Weller J, Murat P, Liberante FG, Ellis T, Church GM, Parts L</p>
-              <p class="venue"><em>Science</em> 387, eado3979 (2025) &middot; <a href="https://doi.org/10.1126/science.ado3979" target="_blank" rel="noopener" style="color:#aaa;">doi:10.1126/science.ado3979</a></p>
+              <p class="venue"><em>Science</em> 387, eado3979 (2025) &middot; <a href="https://doi.org/10.1126/science.ado3979" target="_blank" rel="noopener">doi:10.1126/science.ado3979</a></p>
             </div>
 
           </div>
@@ -227,69 +234,127 @@
 
       </div><!-- /pub-list lab -->
 
-      <!-- ── PRIOR WORK ─────────────────────────────── -->
-      <p class="section-label" style="margin-top: 56px;">Prior Work</p>
+
+      <!-- ════════════════════════════════════════════
+           PRIOR WORK
+      ═════════════════════════════════════════════ -->
+      <p class="section-label section-gap">Prior Work</p>
 
       <div class="pub-list">
 
+        <!-- 2024 -->
+        <div class="year-group">
+          <div class="year-tag">2024</div>
+          <div class="papers-in-year">
+
+            <div class="paper">
+              <h3>Nucleotide depletion promotes cell fate transitions by inducing DNA replication stress</h3>
+              <p class="authors">Do BT†, Hsu PP†, Vermeulen SY, Wang Z, Hirz T, Abbott KL, Aziz N, Replogle JM, et al.</p>
+              <p class="venue"><em>Developmental Cell</em> 59(16), 2203–2221 (2024)</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="year-group">
+          <div class="year-tag">2023</div>
+          <div class="papers-in-year">
+
+            <div class="paper">
+              <h3>mRNA trans-splicing dual AAV vectors for (epi)genome editing and gene therapy</h3>
+              <p class="authors">Riedmayr LM, Hinrichsmeyer KS, Thalhammer SB, Mittas DM, Karguth N, Otify DY, et al.</p>
+              <p class="venue"><em>Nature Communications</em> 14(1), 6578 (2023)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Screening in serum-derived medium reveals differential response to compounds targeting metabolism</h3>
+              <p class="authors">Abbott KL†, Ali A†, Casalena D, Do BT, <strong>Ferreira R</strong>, Cheah JH, Soule CK, Deik A, et al.</p>
+              <p class="venue"><em>Cell Chemical Biology</em> 30(9), 1156–1168 (2023)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Biosensor-assisted laboratory evolution of malonyl-CoA production in Saccharomyces cerevisiae<span class="badge preprint">Preprint</span></h3>
+              <p class="authors"><strong>Ferreira R</strong>†, Hedin KA†, Nielsen J, David F</p>
+              <p class="venue"><em>bioRxiv</em> (2023)</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2022 -->
         <div class="year-group">
           <div class="year-tag">2022</div>
           <div class="papers-in-year">
 
             <div class="paper">
-              <h3>Fluorescence-Activated Cell Sorting as a Tool for Recombinant Strain Screening</h3>
-              <p class="authors">Skrekas C, David F, <strong>Ferreira R</strong></p>
+              <h3>Fluorescence-activated cell sorting as a tool for recombinant strain screening</h3>
+              <p class="authors">Skrekas C, <strong>Ferreira R</strong>, David F</p>
               <p class="venue"><em>Methods Mol. Biol.</em> 2513, 39–57 (2022)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2021 -->
         <div class="year-group">
           <div class="year-tag">2021</div>
           <div class="papers-in-year">
 
             <div class="paper">
               <h3>Fatty acid synthesis is required for breast cancer brain metastasis</h3>
-              <p class="authors">Ferraro GB, Ali A, Luengo A, et al.</p>
+              <p class="authors">Ferraro GB†, Ali A†, Luengo A†, Kodack DP, Deik A, Abbott KL, et al.</p>
               <p class="venue"><em>Nature Cancer</em> 2(4), 414–428 (2021)</p>
             </div>
 
             <div class="paper">
               <h3>Increased demand for NAD<sup>+</sup> relative to ATP drives aerobic glycolysis</h3>
-              <p class="authors">Luengo A, Li Z, Gui DY, et al.</p>
+              <p class="authors">Luengo A, Li Z, Gui DY, Sullivan LB, Zagorulya M, Do BT, <strong>Ferreira R</strong>, et al.</p>
               <p class="venue"><em>Molecular Cell</em> 81(4), 691–707 (2021)</p>
             </div>
 
             <div class="paper">
               <h3>Rational gRNA design based on transcription factor binding data</h3>
-              <p class="authors">Bergenholm D, Dabirian Y, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors">Bergenholm D†, Dabirian Y†, <strong>Ferreira R</strong>†, Siewers V, David F, Nielsen J</p>
               <p class="venue"><em>Synthetic Biology</em> 6(1) (2021)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Laboratory-generated DNA can cause anomalous pathogen diagnostic test results</h3>
+              <p class="authors">Robinson-McCarthy LR†, Mijalis AJ†, Filsinger GT, De Puig H, Donghia NM, Schaus TE, Rasmussen RA, <strong>Ferreira R</strong>, et al.</p>
+              <p class="venue"><em>Microbiology Spectrum</em> 9(2) (2021)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Anomalous COVID-19 tests hinder researchers</h3>
+              <p class="authors">Robinson-McCarthy LR, Mijalis AJ, Filsinger GT, De Puig H, Donghia NM, Schaus TE, Rasmussen RA, <strong>Ferreira R</strong>, et al.</p>
+              <p class="venue"><em>Science</em> 371(6526), 244–245 (2021)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2020 -->
         <div class="year-group">
           <div class="year-tag">2020</div>
           <div class="papers-in-year">
 
             <div class="paper">
               <h3><a href="https://doi.org/10.1093/nar/gkaa239" target="_blank" rel="noopener">Enabling large-scale genome editing at repetitive elements by reducing DNA nicking</a></h3>
-              <p class="authors">Smith CJ, Castanon O, Said K, Volf V, Khoshakhlagh P, Hornick A, <strong>Ferreira R</strong>, et al.</p>
-              <p class="venue"><em>Nucleic Acids Research</em> 48(9), 5183–5195 (2020) &middot; <a href="https://doi.org/10.1093/nar/gkaa239" target="_blank" rel="noopener" style="color:#aaa;">doi:10.1093/nar/gkaa239</a></p>
-            </div>
-
-            <div class="paper">
-              <h3>Dissecting cell-type-specific metabolism in pancreatic ductal adenocarcinoma</h3>
-              <p class="authors">Lau AN, Li Z, Danai LV, et al.</p>
-              <p class="venue"><em>eLife</em> 9 (2020)</p>
+              <p class="authors">Smith CJ†, Castanon O†, Said K, Volf V, Khoshakhlagh P, Hornick A, <strong>Ferreira R</strong>, Wu CT, Güell M, Garg S, et al.</p>
+              <p class="venue"><em>Nucleic Acids Research</em> 48(9), 5183–5195 (2020) &middot; <a href="https://doi.org/10.1093/nar/gkaa239" target="_blank" rel="noopener">doi:10.1093/nar/gkaa239</a></p>
             </div>
 
             <div class="paper">
               <h3>An atlas of human metabolism</h3>
-              <p class="authors">Robinson J, Kocabas P, Wang H, et al.</p>
-              <p class="venue"><em>Science Signaling</em> 13(624) (2020)</p>
+              <p class="authors">Robinson JL†, Kocabaş P†, Wang H†, Cholley PE†, Cook D, Nilsson A, Anton M, <strong>Ferreira R</strong>, et al.</p>
+              <p class="venue"><em>Science Signaling</em> 13(624), eaaz1482 (2020)</p>
+            </div>
+
+            <div class="paper">
+              <h3>Dissecting cell-type-specific metabolism in pancreatic ductal adenocarcinoma</h3>
+              <p class="authors">Lau AN, Li Z, Danai LV, Westermark AM, Darnell AM, <strong>Ferreira R</strong>, Gocheva V, et al.</p>
+              <p class="venue"><em>eLife</em> 9, e56782 (2020)</p>
             </div>
 
             <div class="paper">
@@ -298,111 +363,108 @@
               <p class="venue"><em>Metabolic Engineering</em> 57, 51–62 (2020)</p>
             </div>
 
+            <div class="paper">
+              <h3>CRISPR-mediated biocontainment<span class="badge preprint">Preprint</span></h3>
+              <p class="authors">Castanon O†, Smith CJ†, Khoshakhlagh P, <strong>Ferreira R</strong>, Güell M, Said K, et al.</p>
+              <p class="venue"><em>bioRxiv</em> (2020)</p>
+            </div>
+
           </div>
         </div>
 
+        <!-- 2019 -->
         <div class="year-group">
           <div class="year-tag">2019</div>
           <div class="papers-in-year">
 
             <div class="paper">
-              <h3>Tackling Cancer with Yeast-Based Technologies</h3>
-              <p class="authors">Limeta A, <strong>Ferreira R</strong>, Nielsen J</p>
-              <p class="venue"><em>Trends Biotechnol.</em> 37(6), 592–603 (2019)</p>
+              <h3>Model-assisted fine-tuning of central carbon metabolism in yeast through dCas9-based regulation</h3>
+              <p class="authors"><strong>Ferreira R</strong>, Skrekas C, Hedin A, Sánchez BJ, Siewers V, Nielsen J, David F</p>
+              <p class="venue"><em>ACS Synthetic Biology</em> 8(11), 2457–2463 (2019)</p>
             </div>
 
             <div class="paper">
-              <h3>Model-Assisted Fine-Tuning of Central Carbon Metabolism in Yeast through dCas9-Based Regulation</h3>
-              <p class="authors">Skrekas C, Hedin A, <strong>Ferreira R</strong>, et al.</p>
-              <p class="venue"><em>ACS Synthetic Biology</em> 8(11), 2457–2463 (2019)</p>
+              <h3>Tackling cancer with yeast-based technologies</h3>
+              <p class="authors"><strong>Ferreira R</strong>, Limeta A, Nielsen J</p>
+              <p class="venue"><em>Trends Biotechnol.</em> 37(6), 592–603 (2019)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2018 -->
         <div class="year-group">
           <div class="year-tag">2018</div>
           <div class="papers-in-year">
 
             <div class="paper">
               <h3>Redirection of lipid flux toward phospholipids in yeast increases fatty acid turnover and secretion</h3>
-              <p class="authors">Teixeira PG, Siewers V, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors"><strong>Ferreira R</strong>†, Teixeira PG†, Siewers V, Nielsen J</p>
               <p class="venue"><em>Proc. Natl. Acad. Sci. USA</em> 115(6), 1262–1267 (2018)</p>
             </div>
 
             <div class="paper">
-              <h3>Multiplexed CRISPR/Cas9 Genome Editing and Gene Regulation Using Csy4 in Saccharomyces cerevisiae</h3>
-              <p class="authors">Skrekas C, <strong>Ferreira R</strong>, Nielsen JB, et al.</p>
+              <h3>Multiplexed CRISPR/Cas9 genome editing and gene regulation using Csy4 in Saccharomyces cerevisiae</h3>
+              <p class="authors"><strong>Ferreira R</strong>, Skrekas C, Nielsen J, David F</p>
               <p class="venue"><em>ACS Synthetic Biology</em> 7(1), 10–15 (2018)</p>
             </div>
 
             <div class="paper">
               <h3>Advancing biotechnology with CRISPR/Cas9: recent applications and patent landscape</h3>
-              <p class="authors">David F, <strong>Ferreira R</strong>, Nielsen J</p>
+              <p class="authors"><strong>Ferreira R</strong>, David F, Nielsen J</p>
               <p class="venue"><em>J. Ind. Microbiol. Biotechnol.</em> 45(7), 467–480 (2018)</p>
             </div>
 
             <div class="paper">
               <h3>Metabolic engineering of Saccharomyces cerevisiae for overproduction of triacylglycerols</h3>
-              <p class="authors">Teixeira PG, Gossing M, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors"><strong>Ferreira R</strong>, Teixeira PG, Gossing M, David F, Siewers V, Nielsen J</p>
               <p class="venue"><em>Metab. Eng. Commun.</em> 6, 22–27 (2018)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2017 -->
         <div class="year-group">
           <div class="year-tag">2017</div>
           <div class="papers-in-year">
 
             <div class="paper">
+              <h3>Exploiting off-targeting in guide-RNAs for CRISPR systems for simultaneous editing of multiple genes</h3>
+              <p class="authors"><strong>Ferreira R</strong>†, Gatto F†, Nielsen J</p>
+              <p class="venue"><em>FEBS Letters</em> 591(20), 3288–3295 (2017)</p>
+            </div>
+
+            <div class="paper">
               <h3>Transcriptional reprogramming in yeast using dCas9 and combinatorial gRNA strategies</h3>
-              <p class="authors">Jensen ED, Jakociunas T, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors">Jensen ED†, <strong>Ferreira R</strong>†, Jakočiūnas T, Arsovska D, Zhang J, Ding L, et al.</p>
               <p class="venue"><em>Microbial Cell Factories</em> 16(1), 46 (2017)</p>
             </div>
 
             <div class="paper">
               <h3>Dynamic regulation of fatty acid pools for improved production of fatty alcohols in Saccharomyces cerevisiae</h3>
-              <p class="authors">Teixeira PG, Zhou Y, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors">Teixeira PG, <strong>Ferreira R</strong>, Zhou YJ, Siewers V, Nielsen J</p>
               <p class="venue"><em>Microbial Cell Factories</em> 16(1), 45 (2017)</p>
             </div>
 
             <div class="paper">
-              <h3>Exploiting off-targeting in guide-RNAs for CRISPR systems for simultaneous editing of multiple genes</h3>
-              <p class="authors"><strong>Ferreira R</strong>, Gatto F, Nielsen J</p>
-              <p class="venue"><em>FEBS Letters</em> 591(20), 3288–3295 (2017)</p>
-            </div>
-
-            <div class="paper">
               <h3>Effects of acetoacetyl-CoA synthase expression on production of farnesene in Saccharomyces cerevisiae</h3>
-              <p class="authors">Tippmann S, Siewers V, <strong>Ferreira R</strong>, et al.</p>
+              <p class="authors">Tippmann S, <strong>Ferreira R</strong>, Siewers V, Nielsen J, Chen Y</p>
               <p class="venue"><em>J. Ind. Microbiol. Biotechnol.</em> 44(6), 911–922 (2017)</p>
             </div>
 
           </div>
         </div>
 
+        <!-- 2015 -->
         <div class="year-group">
           <div class="year-tag">2015</div>
           <div class="papers-in-year">
 
             <div class="paper">
-              <h3>Molecular recognition in naphthoquinone derivatives — G-quadruplex complexes by NMR</h3>
-              <p class="authors">Riva B, Musso L, <strong>Ferreira R</strong>, et al.</p>
-              <p class="venue"><em>Biochim. Biophys. Acta</em> 1850(4), 673–680 (2015)</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="year-group">
-          <div class="year-tag">2014</div>
-          <div class="papers-in-year">
-
-            <div class="paper">
-              <h3>Photoswitch kinase inhibitors</h3>
-              <p class="authors">Nilsson J, Solano C, <strong>Ferreira R</strong>, et al.</p>
-              <p class="venue"><em>Purinergic Signal.</em> 10(4), 767–768 (2014)</p>
+              <h3>An overhang-based DNA block shuffling method for creating a customized random library</h3>
+              <p class="authors">Fujishima K, Venter C, Wang K, <strong>Ferreira R</strong>, Rothschild LJ</p>
+              <p class="venue"><em>Scientific Reports</em> 5(1), 9740 (2015)</p>
             </div>
 
           </div>
