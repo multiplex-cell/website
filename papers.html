@@ -63,6 +63,79 @@
       margin-bottom: 36px;
     }
 
+    /* ── FEATURED PAPER ── */
+    .featured-paper {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid #e0ddd8;
+    }
+
+    .featured-paper .fp-image {
+      width: 220px;
+      aspect-ratio: 220 / 160;
+      overflow: hidden;
+      background: #1a1f3a;
+      flex-shrink: 0;
+    }
+
+    .featured-paper .fp-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      display: block;
+    }
+
+    .featured-paper .fp-body {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .fp-tag {
+      font-family: Arial, sans-serif;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #aaa;
+    }
+
+    .fp-title {
+      font-size: 0.93rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+
+    .fp-title a {
+      color: #111;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: #ccc;
+    }
+    .fp-title a:hover { text-decoration-color: #111; }
+
+    .fp-authors {
+      font-family: Arial, sans-serif;
+      font-size: 0.77rem;
+      color: #888;
+      line-height: 1.5;
+    }
+    .fp-authors strong { color: #333; font-weight: 600; }
+
+    .fp-venue {
+      font-family: Arial, sans-serif;
+      font-size: 0.77rem;
+      color: #aaa;
+    }
+    .fp-venue em { font-style: italic; color: #999; }
+    .fp-venue a { color: #bbb; text-decoration: none; }
+    .fp-venue a:hover { color: #777; text-decoration: underline; }
+
     /* ── PUB LIST ── */
     .pub-list { display: flex; flex-direction: column; gap: 32px; }
 
@@ -147,6 +220,11 @@
     /* ── FOOTER ── */
     footer { margin-top: 80px; font-family: Arial, sans-serif; font-size: 0.75rem; color: #888; }
 
+    @media (max-width: 620px) {
+      .featured-paper { grid-template-columns: 1fr; }
+      .featured-paper .fp-image { width: 100%; aspect-ratio: 16/7; }
+    }
+
     @media (max-width: 560px) {
       body { padding: 40px 20px; }
       .year-group { grid-template-columns: 1fr; gap: 4px; }
@@ -178,9 +256,27 @@
       ═════════════════════════════════════════════ -->
       <p class="section-label">Lab Publications</p>
 
+      <div class="featured-paper">
+        <div class="fp-image">
+          <img src="files/nature-protocols-cover.jpg" alt="Nature Protocols — This Week's Featured Protocol">
+        </div>
+        <div class="fp-body">
+          <p class="fp-tag">Nature Protocols &middot; Research of the Week</p>
+          <p class="fp-title"><a href="https://www.nature.com/articles/s41596-026-01409-y" target="_blank" rel="noopener">Large-scale genome structure interrogation via recombinase-mediated rearrangements of multiplexed prime edits in repetitive elements</a></p>
+          <p class="fp-authors">Riedmayr LM, Koeppel J, Church GM, Parts L, <strong>Ferreira R</strong></p>
+          <p class="fp-venue"><em>Nature Protocols</em> (2026) &middot; <a href="https://doi.org/10.1038/s41596-026-01409-y" target="_blank" rel="noopener">doi:10.1038/s41596-026-01409-y</a></p>
+        </div>
+      </div>
+
+
+      <!-- ════════════════════════════════════════════
+           PRIOR WORK
+      ═════════════════════════════════════════════ -->
+      <p class="section-label section-gap">Prior Work</p>
+
       <div class="pub-list">
 
-        <!-- 2026 -->
+        <!-- 2026 postdoc papers published after lab opened -->
         <div class="year-group">
           <div class="year-tag">2026</div>
           <div class="papers-in-year">
@@ -195,12 +291,6 @@
               <h3>Programmable nucleic acid sensing in human cells using circularizable ssDNA</h3>
               <p class="authors">Mahas A†, <strong>Ferreira R</strong>†, Riedmayr LM, Church GM</p>
               <p class="venue"><em>Nature Communications</em> 17 (2026)</p>
-            </div>
-
-            <div class="paper">
-              <h3><a href="https://www.nature.com/articles/s41596-026-01409-y" target="_blank" rel="noopener">Large-scale genome structure interrogation via recombinase-mediated rearrangements of multiplexed prime edits in repetitive elements</a><span class="badge">Research of the Week</span></h3>
-              <p class="authors">Riedmayr LM, Koeppel J, Church GM, Parts L, <strong>Ferreira R</strong></p>
-              <p class="venue"><em>Nature Protocols</em> (2026) &middot; <a href="https://doi.org/10.1038/s41596-026-01409-y" target="_blank" rel="noopener">doi:10.1038/s41596-026-01409-y</a></p>
             </div>
 
             <div class="paper">
@@ -231,16 +321,6 @@
 
           </div>
         </div>
-
-      </div><!-- /pub-list lab -->
-
-
-      <!-- ════════════════════════════════════════════
-           PRIOR WORK
-      ═════════════════════════════════════════════ -->
-      <p class="section-label section-gap">Prior Work</p>
-
-      <div class="pub-list">
 
         <!-- 2024 -->
         <div class="year-group">
