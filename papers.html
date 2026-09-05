@@ -74,12 +74,16 @@
 
     .featured-paper .fp-image {
       width: 100%;
+      max-height: 180px;
+      overflow: hidden;
       background: #1a1f3a;
     }
 
     .featured-paper .fp-image img {
       width: 100%;
-      height: auto;
+      height: 180px;
+      object-fit: cover;
+      object-position: right center;
       display: block;
     }
 
