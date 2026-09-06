@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Multiplex Cell Engineering Lab</title>
+  <meta name="description" content="Research at the Multiplex Cell Engineering Lab — developing multiplex genome editing tools for cell therapy at DTU Health Tech.">
+  <meta property="og:title" content="Research — Multiplex Cell Engineering Lab">
+  <meta property="og:description" content="Developing multiplex genome editing tools at the interface of genome engineering and cell therapy.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Multiplex Cell Engineering Lab">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    #helix-stage {
+      position: fixed; inset: 0; z-index: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #f4eee2; overflow: hidden;
+    }
+    #helix-canvas { flex: none; transform-origin: center center; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-content { position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    .site-name { font-size: 0.85rem; font-family: 'Inter', sans-serif; margin-bottom: 6px; }
+    .site-name a { color: #111; text-decoration: none; }
+    .site-name a:hover { text-decoration: underline; }
+
+    nav { margin-bottom: 60px; }
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #111;
+      text-decoration: none;
+      margin-right: 20px;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { text-decoration: underline; }
+    nav a.active { border-bottom: 1px solid #111; }
+
+    /* ── CONTENT PANEL ── */
+    .content-panel {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 6px;
+      padding: 40px 44px;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #777;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0ddd8;
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 28px;
+    }
+
+    /* ── OVERVIEW ── */
+    .overview {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: #333;
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+
+    /* ── RESEARCH AREAS ── */
+    .areas {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .area {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 0 20px;
+      align-items: start;
+    }
+
+    .area-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: #bbb;
+      padding-top: 4px;
+    }
+
+    .area h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .area p {
+      font-size: 0.90rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 80px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 40px 20px; }
+      .content-panel { padding: 28px 24px; }
+      nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 40px; }
+      nav a { margin-right: 0; }
+      .area { grid-template-columns: 1fr; gap: 4px; }
+      .area-number { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="helix-stage"><canvas id="helix-canvas" width="1672" height="941"></canvas></div>
+
+  <div class="page-content">
+    <div class="site-name"><a href="index.html">Multiplex Cell Engineering Lab</a></div>
+    <nav>
+      <a href="people.html">people</a>
+      <a href="news.html">news</a>
+      <a href="research.html" class="active">research</a>
+      <a href="papers.html">papers</a>
+      <a href="https://github.com/multiplex-cell/wiki" target="_blank" rel="noopener">wiki</a>
+      <a href="join.html">join</a>
+      <a href="contact.html">contact</a>
+    </nav>
+
+    <div class="content-panel">
+      <p class="section-label">Research</p>
+
+      <p class="overview">
+        We work at the interface of genome engineering and cell therapy, developing next-generation
+        tools for multiplexed, precise editing of the human genome. Our goal is to push the boundaries
+        of what can be written into a living cell — and to translate that capability into therapeutic
+        strategies for disease.
+      </p>
+
+      <div class="areas">
+
+        <div class="area">
+          <div class="area-number">01</div>
+          <div>
+            <h2>Multiplex genome editing</h2>
+            <p>
+              Making many precise edits simultaneously in a single cell remains a fundamental challenge.
+              We develop recombinase-based and prime-editing platforms that enable large-scale,
+              programmable rearrangements of the human genome — from targeted insertions to
+              chromosome-scale restructuring.
+            </p>
+          </div>
+        </div>
+
+        <div class="area">
+          <div class="area-number">02</div>
+          <div>
+            <h2>Hematopoietic stem cell engineering</h2>
+            <p>
+              Hematopoietic stem cells offer a unique route to durable, systemic gene therapy.
+              We engineer HSCs with multiplexed edits to reprogram their progeny for targeted
+              applications — including brain repair — exploiting the natural migratory capacity
+              of HSC-derived cells.
+            </p>
+          </div>
+        </div>
+
+        <div class="area">
+          <div class="area-number">03</div>
+          <div>
+            <h2>Precision base editing and sensing</h2>
+            <p>
+              We develop and evolve base editors with reduced bystander activity, and programmable
+              nucleic acid sensing platforms that link detection of genomic or transcriptomic signals
+              to controlled gene expression in human cells.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /content-panel -->
+
+    <footer>
+      &copy; <span id="yr"></span> Multiplex Cell Engineering Lab &mdash; DTU Health Tech
+    </footer>
+  </div><!-- /.page-content -->
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="files/helix.js" defer></script>
+</body>
+</html>
