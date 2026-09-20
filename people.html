@@ -111,6 +111,20 @@
      .photo-wrap img.zoomed {
       transform: scale(1.20);
     }
+
+    /* Photo swap hover effect */
+    .photo-swap .photo-hover {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .photo-swap:hover .photo-hover { opacity: 1; }
+    .photo-swap .photo-default { transition: opacity 0.25s ease; }
+    .photo-swap:hover .photo-default { opacity: 0; }
     /* Initials fallback shown when no image */
     .photo-wrap .initials {
       width: 100%;
@@ -230,8 +244,9 @@
 
       <!-- Anny -->
       <div class="person">
-        <div class="photo-wrap">
-          <img src="files/roster/anny.jpg" alt="Anny Mais" class="zoomed">
+        <div class="photo-wrap photo-swap">
+          <img src="files/roster/anny-pro.jpg" alt="Anny Mais" class="photo-default">
+          <img src="files/roster/anny.jpg" alt="Anny Mais" class="zoomed photo-hover">
         </div>
         <div class="person-info">
           <h2>Anny Mais</h2>
