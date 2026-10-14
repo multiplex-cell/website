@@ -132,17 +132,25 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #777;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
 
-    .funding-bodies {
-      font-size: 0.88rem;
-      color: #555;
-      line-height: 1.8;
+    .funder-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px 44px;
     }
 
-    .funding-bodies a { color: #555; text-decoration: underline; text-underline-offset: 2px; }
-    .funding-bodies a:hover { color: #111; }
+    .funder-logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+
+    .funder-logo:hover img { opacity: 1; }
 
     /* ── FOOTER ── */
     footer {
@@ -231,12 +239,17 @@
 
       <div class="funding">
         <p class="funding-label">Funding</p>
-        <p class="funding-bodies">
-          Our research is generously supported by the
-          <a href="https://lundbeckfonden.com" target="_blank" rel="noopener">Lundbeck Foundation</a>,
-          the <a href="https://novonordiskfonden.dk/en/" target="_blank" rel="noopener">Novo Nordisk Foundation</a>,
-          and the <a href="https://dff.dk/en" target="_blank" rel="noopener">Independent Research Fund Denmark (DFF)</a>.
-        </p>
+        <div class="funder-logos">
+          <a href="https://lundbeckfonden.com" target="_blank" rel="noopener" class="funder-logo">
+            <img src="files/funders/lundbeck.svg" alt="Lundbeck Foundation">
+          </a>
+          <a href="https://novonordiskfonden.dk/en/" target="_blank" rel="noopener" class="funder-logo">
+            <img src="files/funders/nnf.svg" alt="Novo Nordisk Foundation">
+          </a>
+          <a href="https://dff.dk/en" target="_blank" rel="noopener" class="funder-logo">
+            <img src="files/funders/dff-header.png" alt="Independent Research Fund Denmark">
+          </a>
+        </div>
       </div>
 
     </div><!-- /content-panel -->
